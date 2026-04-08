@@ -13,12 +13,12 @@ public class peleador {
     private int energia;
     private Float defensaBase;
     private Arma armaEqupiada;
-    private ArrayList[] inventario;
-    private ArrayList[] habilidades;
+    private ArrayList<> inventario;
+    private ArrayList<> habilidades;
 
 
     public peleador(int id, String nombre, int puntosVida, int energia, Float defensaBase, Arma armaEqupiada,
-            ArrayList[] inventario, ArrayList[] habilidades) {
+            ArrayList<> inventario, ArrayList<> habilidades) {
         this.id = id;
         this.nombre = nombre;
         this.puntosVida = puntosVida;
@@ -60,12 +60,12 @@ public class peleador {
     }
 
 
-    public ArrayList[] getInventario() {
+    public ArrayList<> getInventario() {
         return inventario;
     }
 
 
-    public ArrayList[] getHabilidades() {
+    public ArrayList<> getHabilidades() {
         return habilidades;
     }
 
