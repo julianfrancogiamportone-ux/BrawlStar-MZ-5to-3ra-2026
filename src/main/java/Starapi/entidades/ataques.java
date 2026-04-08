@@ -47,8 +47,6 @@ public int getDanioBase() {
 public void setDanioBase(int danioBase) {
     this.danioBase = danioBase;
 }
-
-
 }
 
 
