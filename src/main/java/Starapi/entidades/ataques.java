@@ -15,7 +15,7 @@ private int danioBase;
 
 
 
-@ManyToMany(mappedBy = "PeleadoresColaboradores")
+@ManyToMany(mappedBy = "Armas")
 private List <Peleador> Peleadores;
 
 
