@@ -14,7 +14,7 @@ private int danioBase;
 
 
 
-
+// many to many ralacion
 @ManyToMany(mappedBy = "Armas")
 private List <Peleador> Peleadores;
 
