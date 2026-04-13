@@ -16,6 +16,23 @@ public class peleador {
     private ArrayList<Arma> inventario;
     private ArrayList<ataque> habilidades;
 
+    @ManyToMany
+    @JoinTable(
+         name = "peleador-ataques", 
+        joinColumns = @JoinColumn(name = "peleador_id"),  
+        inverseJoinColumns = @JoinColumn(name = "ataque_id")
+    )
+    private List<ataques> Ataques; 
+
+    @ManyToMany
+    @JoinTable(
+         name = "peleador-armas", 
+        joinColumns = @JoinColumn(name = "peleador_id"),  
+        inverseJoinColumns = @JoinColumn(name = "arma_id")
+    )
+    private List<armas> Armas; 
+
+
 
     public peleador(int id, String nombre, int puntosVida, int energia, Float defensaBase, Arma armaEqupiada,
             ArrayList<> inventario, ArrayList<> habilidades) {
@@ -109,8 +126,3 @@ public class peleador {
         this.habilidades = habilidades;
     }
 }
-
-
-
-
-

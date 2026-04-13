@@ -48,20 +48,4 @@ public void setDanioBase(int danioBase) {
     this.danioBase = danioBase;
 }
 
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
