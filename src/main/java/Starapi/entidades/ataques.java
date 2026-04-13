@@ -1,5 +1,6 @@
 package Starapi.entidades;
 import jakarta.persistence.*;
+
 import java.util.List;
 @Entity
 public class ataques {
@@ -10,8 +11,10 @@ private String nombre;
 private int costoEnergia;
 private int danioBase;
 
+
 @ManyToMany(mappedBy = "Ataques") 
     private List<peleador> peleadores; 
+
 public ataques(Long id, String nombre, int costoEnergia, int danioBase) {
     this.id = id;
     this.nombre = nombre;
@@ -50,10 +53,7 @@ public int getDanioBase() {
 public void setDanioBase(int danioBase) {
     this.danioBase = danioBase;
 }
+
 }
-
-
-
-
 
 
