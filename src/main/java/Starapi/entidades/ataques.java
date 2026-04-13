@@ -1,5 +1,7 @@
 package Starapi.entidades;
 import jakarta.persistence.*;
+importjava.util.List
+
 @Entity
 public class ataques {
     @Id
@@ -8,6 +10,17 @@ private Long id;
 private String nombre;
 private int costoEnergia;
 private int danioBase;
+
+
+
+
+
+@ManyToMany(mappedBy = "PeleadoresColaboradores")
+private List <Peleador> Peleadores;
+
+
+
+
 
 public ataques(Long id, String nombre, int costoEnergia, int danioBase) {
     this.id = id;
