@@ -1,10 +1,12 @@
 package Starapi.entidades;
-import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.*;
+import Starapi.entidades.Arma;
+import Starapi.entidades.Ataque;
 @Entity
 
-public class peleador {
+public class Peleador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -13,12 +15,30 @@ public class peleador {
     private int energia;
     private Float defensaBase;
     private Arma armaEqupiada;
-    private ArrayList<Arma> inventario;
-    private ArrayList<ataque> habilidades;
+    private List<Arma> inventario;
+    private List<Ataque> habilidades;
+
+    @ManyToMany
+    @JoinTable(
+         name = "peleador-ataques", 
+        joinColumns = @JoinColumn(name = "peleador_id"),  
+        inverseJoinColumns = @JoinColumn(name = "ataque_id")
+    )
+    private List<Ataque> Ataques; 
+
+    @ManyToMany
+    @JoinTable(
+         name = "peleador-armas", 
+        joinColumns = @JoinColumn(name = "peleador_id"),  
+        inverseJoinColumns = @JoinColumn(name = "arma_id")
+    )
+    private List<Arma> Armas; 
 
 
-    public peleador(int id, String nombre, int puntosVida, int energia, Float defensaBase, Arma armaEqupiada,
-            ArrayList<> inventario, ArrayList<> habilidades) {
+
+
+    public Peleador(int id, String nombre, int puntosVida, int energia, Float defensaBase, Arma armaEqupiada,
+            List<Arma> inventario, List<Ataque> habilidades, List<Ataque> ataques, List<Arma> armas) {
         this.id = id;
         this.nombre = nombre;
         this.puntosVida = puntosVida;
@@ -27,6 +47,8 @@ public class peleador {
         this.armaEqupiada = armaEqupiada;
         this.inventario = inventario;
         this.habilidades = habilidades;
+        Ataques = ataques;
+        Armas = armas;
     }
 
 
@@ -109,8 +131,3 @@ public class peleador {
         this.habilidades = habilidades;
     }
 }
-
-
-
-
-

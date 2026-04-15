@@ -1,7 +1,8 @@
 package Starapi.entidades;
 import jakarta.persistence.*;
+import Starapi.entidades.Peleador;
 @Entity
-public class armas {
+public class Arma {
  
 private Long id;
 private String nombre;
@@ -9,10 +10,11 @@ private Long bonificadorDanio;
 private float peso;
 
 
+ @ManyToMany(mappedBy = "Armas")
+    private List<Peleador> peleadores;
 
 
-
-public armas(Long id, String nombre, Long bonificadorDanio, float peso) {
+public Arma(Long id, String nombre, Long bonificadorDanio, float peso) {
     this.id = id;
     this.nombre = nombre;
     this.bonificadorDanio = bonificadorDanio;
