@@ -1,6 +1,7 @@
 package Starapi.entidades;
 import jakarta.persistence.*;
 import Starapi.entidades.Peleador;
+import java.util.List;
 @Entity
 public class Arma {
  
