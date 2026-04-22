@@ -1,9 +1,6 @@
 package Starapi.entidades;
 import java.util.List;
-
 import jakarta.persistence.*;
-import Starapi.entidades.Arma;
-import Starapi.entidades.Ataque;
 @Entity
 
 public class Peleador {
@@ -14,9 +11,6 @@ public class Peleador {
     private int puntosVida;
     private int energia;
     private Float defensaBase;
-    private Arma armaEqupiada;
-    private List<Arma> inventario;
-    private List<Ataque> habilidades;
 
     @ManyToMany
     @JoinTable(
@@ -44,9 +38,6 @@ public class Peleador {
         this.puntosVida = puntosVida;
         this.energia = energia;
         this.defensaBase = defensaBase;
-        this.armaEqupiada = armaEqupiada;
-        this.inventario = inventario;
-        this.habilidades = habilidades;
         Ataques = ataques;
         Armas = armas;
     }
@@ -77,19 +68,7 @@ public class Peleador {
     }
 
 
-    public Arma getArmaEqupiada() {
-        return armaEqupiada;
-    }
-
-
-    public ArrayList<> getInventario() {
-        return inventario;
-    }
-
-
-    public ArrayList<> getHabilidades() {
-        return habilidades;
-    }
+    
 
 
     public void setId(int id) {
@@ -117,17 +96,5 @@ public class Peleador {
     }
 
 
-    public void setArmaEqupiada(Arma armaEqupiada) {
-        this.armaEqupiada = armaEqupiada;
-    }
-
-
-    public void setInventario(ArrayList<> inventario) {
-        this.inventario = inventario;
-    }
-
-
-    public void setHabilidades(ArrayList<> habilidades) {
-        this.habilidades = habilidades;
-    }
+    
 }
