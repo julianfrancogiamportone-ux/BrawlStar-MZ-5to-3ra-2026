@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Peleador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private String nombre;
     private int puntosVida;
     private int energia;
@@ -31,19 +31,36 @@ public class Peleador {
 
 
 
-    public Peleador(int id, String nombre, int puntosVida, int energia, Float defensaBase, Arma armaEqupiada,
-            List<Arma> inventario, List<Ataque> habilidades, List<Ataque> ataques, List<Arma> armas) {
+    public Peleador(long id, String nombre, int puntosVida, int energia, Float defensaBase){
         this.id = id;
         this.nombre = nombre;
         this.puntosVida = puntosVida;
         this.energia = energia;
         this.defensaBase = defensaBase;
+    }
+
+
+    public List<Ataque> getAtaques() {
+        return Ataques;
+    }
+
+
+    public void setAtaques(List<Ataque> ataques) {
         Ataques = ataques;
+    }
+
+
+    public List<Arma> getArmas() {
+        return Armas;
+    }
+
+
+    public void setArmas(List<Arma> armas) {
         Armas = armas;
     }
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -71,7 +88,7 @@ public class Peleador {
     
 
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
