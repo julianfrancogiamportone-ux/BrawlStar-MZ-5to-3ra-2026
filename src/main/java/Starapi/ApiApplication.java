@@ -216,6 +216,7 @@ public class ApiApplication {
                 System.out.println("- " + ataque.getNombre() + " (Costo energía: " + ataque.getCostoEnergia() + ")");
             }
         }
+	
     }
 	
 }
