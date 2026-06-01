@@ -14,6 +14,7 @@ public class ApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiApplication.class, args);
+<<<<<<< HEAD
 
 		// =========================================================================
         // Ejercicio 1
@@ -216,6 +217,9 @@ public class ApiApplication {
                 System.out.println("- " + ataque.getNombre() + " (Costo energía: " + ataque.getCostoEnergia() + ")");
             }
         }
+=======
+        
+>>>>>>> origin/pipi3
 	
     }
 	
