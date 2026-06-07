@@ -50,4 +50,5 @@ public class Arma {
     public float getPeso() {
     return peso;
     }
+
 }
