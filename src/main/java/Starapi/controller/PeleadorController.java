@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import Starapi.IService.PeleadorIservice; 
 import Starapi.entidades.Peleador;
 import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@CrossOrigin(origins = "*")
 @RestController 
 @RequestMapping("/api/characters") 
 public class PeleadorController { 

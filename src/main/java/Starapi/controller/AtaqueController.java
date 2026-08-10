@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping; 
 import org.springframework.web.bind.annotation.RestController; 
 import Starapi.IService.AtaqueIservice; 
-import Starapi.entidades.Ataque; 
+import Starapi.entidades.Ataque;
+import org.springframework.web.bind.annotation.CrossOrigin;
  
+@CrossOrigin(origins = "*")
 @RestController 
 @RequestMapping("/api/attacks") 
 public class AtaqueController { 
