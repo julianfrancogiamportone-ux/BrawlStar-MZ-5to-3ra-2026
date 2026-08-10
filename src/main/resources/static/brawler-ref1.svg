@@ -1,0 +1,44 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#3a1f12"/>
+  <circle cx="100" cy="200" r="90" fill="#b44622"/>
+
+  <!-- back arm holding slingshot -->
+  <rect x="150" y="90" width="14" height="70" rx="7" fill="#8a3418" transform="rotate(18 150 90)"/>
+
+  <!-- legs -->
+  <rect x="72" y="150" width="22" height="42" rx="8" fill="#2a160c"/>
+  <rect x="106" y="150" width="22" height="42" rx="8" fill="#2a160c"/>
+  <ellipse cx="83" cy="194" rx="16" ry="8" fill="#1a1008"/>
+  <ellipse cx="117" cy="194" rx="16" ry="8" fill="#1a1008"/>
+
+  <!-- torso -->
+  <path d="M62 118 Q100 96 138 118 L134 168 Q100 182 66 168 Z" fill="#ff7a2e" stroke="#1a1008" stroke-width="4"/>
+  <path d="M78 122 L100 132 L122 122 L118 140 L100 148 L82 140 Z" fill="#ffc93c"/>
+
+  <!-- front arm on hip -->
+  <path d="M62 122 Q42 130 46 156 Q54 168 66 160 Z" fill="#ff7a2e" stroke="#1a1008" stroke-width="4"/>
+  <circle cx="52" cy="160" r="10" fill="#e6c9a3"/>
+
+  <!-- neck -->
+  <rect x="90" y="90" width="20" height="18" fill="#e6c9a3"/>
+
+  <!-- head -->
+  <circle cx="100" cy="66" r="42" fill="#e6c9a3" stroke="#1a1008" stroke-width="4"/>
+
+  <!-- headband -->
+  <path d="M58 58 Q100 34 142 58 L140 46 Q100 24 60 46 Z" fill="#6c3fa8" stroke="#1a1008" stroke-width="3"/>
+  <circle cx="100" cy="38" r="7" fill="#ffc93c" stroke="#1a1008" stroke-width="2"/>
+  <path d="M138 52 L162 44 L156 64 Z" fill="#6c3fa8" stroke="#1a1008" stroke-width="3"/>
+
+  <!-- face -->
+  <ellipse cx="82" cy="68" rx="7" ry="9" fill="#1a1008"/>
+  <ellipse cx="118" cy="68" rx="7" ry="9" fill="#1a1008"/>
+  <circle cx="84" cy="65" r="2" fill="#fff"/>
+  <circle cx="120" cy="65" r="2" fill="#fff"/>
+  <path d="M84 88 Q100 98 116 88" stroke="#1a1008" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="70" cy="82" r="7" fill="#ff9a4d" opacity="0.6"/>
+  <circle cx="130" cy="82" r="7" fill="#ff9a4d" opacity="0.6"/>
+
+  <!-- star badge -->
+  <text x="100" y="180" font-family="'Lilita One','Bangers',cursive" font-size="20" fill="#ffc93c" text-anchor="middle" stroke="#1a1008" stroke-width="1">P1</text>
+</svg>

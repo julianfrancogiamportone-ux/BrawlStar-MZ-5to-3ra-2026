@@ -1,6 +1,6 @@
 package Starapi.IService;
 import java.util.List; 
-import Satarapi.entidades.Ataque; 
+import Starapi.entidades.Ataque; 
  
 public interface AtaqueIservice { 
 public List<Ataque> findAllAttacks(); 

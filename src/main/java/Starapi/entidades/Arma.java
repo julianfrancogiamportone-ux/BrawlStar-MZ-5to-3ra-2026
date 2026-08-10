@@ -12,6 +12,8 @@ public class Arma {
 
     @ManyToMany(mappedBy = "Armas")
     private List<Peleador> peleadores;
+    public Arma() {
+    }
 
     public Arma(Long id, String nombre, Long bonificadorDanio, float peso) {
     this.id = id;

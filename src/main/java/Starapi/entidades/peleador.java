@@ -11,6 +11,7 @@ public class Peleador {
     private int puntosVida;
     private int energia;
     private Float defensaBase;
+    private String URLimagen;
 
     @ManyToMany
     @JoinTable(
@@ -28,12 +29,16 @@ public class Peleador {
     )
     private List<Arma> Armas; 
 
-    public Peleador(long id, String nombre, int puntosVida, int energia, Float defensaBase){
+    public Peleador() {
+    }
+
+    public Peleador(long id, String nombre, int puntosVida, int energia, Float defensaBase, String URLimagen) {
         this.id = id;
         this.nombre = nombre;
         this.puntosVida = puntosVida;
         this.energia = energia;
         this.defensaBase = defensaBase;
+        this.URLimagen = URLimagen;
     }
 
     public List<Ataque> getAtaques() {
@@ -90,6 +95,14 @@ public class Peleador {
 
     public void setDefensaBase(Float defensaBase) {
         this.defensaBase = defensaBase;
+    }
+
+    public String getURLimagen() {
+        return URLimagen;
+    }
+
+    public void setURLimagen(String URLimagen) {
+        this.URLimagen = URLimagen;
     }
     
 }
