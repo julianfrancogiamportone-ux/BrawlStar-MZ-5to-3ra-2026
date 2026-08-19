@@ -1,0 +1,45 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#0d2b30"/>
+  <circle cx="100" cy="200" r="90" fill="#0f6b78"/>
+
+  <!-- back arm holding gadget -->
+  <rect x="36" y="90" width="14" height="70" rx="7" fill="#0a4b54" transform="rotate(-18 43 90)"/>
+  <rect x="20" y="150" width="26" height="14" rx="4" fill="#ffc93c" stroke="#1a1008" stroke-width="3"/>
+
+  <!-- legs -->
+  <rect x="72" y="150" width="22" height="42" rx="8" fill="#0a2a2e"/>
+  <rect x="106" y="150" width="22" height="42" rx="8" fill="#0a2a2e"/>
+  <ellipse cx="83" cy="194" rx="16" ry="8" fill="#071a1c"/>
+  <ellipse cx="117" cy="194" rx="16" ry="8" fill="#071a1c"/>
+
+  <!-- torso -->
+  <path d="M62 118 Q100 96 138 118 L134 168 Q100 182 66 168 Z" fill="#4dd0e1" stroke="#1a1008" stroke-width="4"/>
+  <path d="M78 122 L100 132 L122 122 L118 140 L100 148 L82 140 Z" fill="#e9fbff"/>
+
+  <!-- front arm on hip -->
+  <path d="M138 122 Q158 130 154 156 Q146 168 134 160 Z" fill="#4dd0e1" stroke="#1a1008" stroke-width="4"/>
+  <circle cx="148" cy="160" r="10" fill="#f2d9b8"/>
+
+  <!-- neck -->
+  <rect x="90" y="90" width="20" height="18" fill="#f2d9b8"/>
+
+  <!-- head -->
+  <circle cx="100" cy="66" r="42" fill="#f2d9b8" stroke="#1a1008" stroke-width="4"/>
+
+  <!-- visor/goggles -->
+  <path d="M60 60 Q100 44 140 60 L136 74 Q100 62 64 74 Z" fill="#1a1008"/>
+  <circle cx="82" cy="66" r="11" fill="#a8f0ff" stroke="#ffc93c" stroke-width="3"/>
+  <circle cx="118" cy="66" r="11" fill="#a8f0ff" stroke="#ffc93c" stroke-width="3"/>
+
+  <!-- hair spikes -->
+  <path d="M64 40 L74 22 L82 40 Z" fill="#1a1008"/>
+  <path d="M90 34 L100 14 L110 34 Z" fill="#1a1008"/>
+  <path d="M118 40 L126 22 L136 40 Z" fill="#1a1008"/>
+
+  <!-- face -->
+  <path d="M84 90 Q100 96 116 90" stroke="#1a1008" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="70" cy="82" r="6" fill="#ff9a9a" opacity="0.5"/>
+  <circle cx="130" cy="82" r="6" fill="#ff9a9a" opacity="0.5"/>
+
+  <text x="100" y="180" font-family="'Lilita One','Bangers',cursive" font-size="20" fill="#e9fbff" text-anchor="middle" stroke="#1a1008" stroke-width="1">P2</text>
+</svg>

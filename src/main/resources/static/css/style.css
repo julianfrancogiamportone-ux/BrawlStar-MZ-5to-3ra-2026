@@ -1,0 +1,297 @@
+/* ===========================================================
+   PELEA ÉPICA — tema inspirado en Brawl Stars
+   Paleta: Naranja atardecer, Púrpura brawl, Dorado estrella,
+           Óxido cañón, Tinta negra, Crema pergamino
+   =========================================================== */
+
+:root {
+    --sunset-orange: #ff7a2e;
+    --canyon-rust: #b44622;
+    --brawl-purple: #6c3fa8;
+    --star-gold: #ffc93c;
+    --ink: #1a1008;
+    --cream: #fff3d6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo 2', 'Arial', sans-serif;
+    color: var(--cream);
+    text-align: center;
+    padding: 24px 16px 60px;
+    min-height: 100vh;
+    margin: 0;
+
+    background-image:
+        linear-gradient(180deg, rgba(15, 8, 4, 0.55) 0%, rgba(20, 10, 6, 0.35) 40%, rgba(10, 5, 3, 0.75) 100%),
+        url('canyon-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.arena {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ---------- Título ---------- */
+
+.title-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: linear-gradient(180deg, var(--brawl-purple) 0%, #4c2a7a 100%);
+    border: 5px solid var(--ink);
+    border-radius: 18px;
+    box-shadow:
+        0 0 0 4px var(--star-gold),
+        6px 8px 0 var(--ink),
+        0 10px 25px rgba(0, 0, 0, 0.5);
+    padding: 14px 20px;
+    margin: 0 auto 40px;
+    max-width: 720px;
+    transform: rotate(-1deg);
+}
+
+h1 {
+    font-family: 'Nougat', 'Lilita One', 'Bangers', cursive;
+    font-size: clamp(28px, 5vw, 46px);
+    letter-spacing: 2px;
+    margin: 0;
+    color: var(--star-gold);
+    -webkit-text-stroke: 2px var(--ink);
+    text-shadow:
+        3px 3px 0 var(--ink),
+        3px 3px 0 var(--ink),
+        6px 6px 0 rgba(0, 0, 0, 0.35);
+}
+
+.fire {
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+}
+
+.title-star {
+    font-size: 28px;
+    color: var(--star-gold);
+    text-shadow: 2px 2px 0 var(--ink);
+    animation: spin-pulse 3s linear infinite;
+}
+
+.star-right {
+    animation-direction: reverse;
+}
+
+@keyframes spin-pulse {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* ---------- Contenedor de pelea ---------- */
+
+#fight-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(20, 10, 6, 0.6);
+    backdrop-filter: blur(2px);
+    border: 4px solid var(--ink);
+    border-radius: 16px;
+    box-shadow:
+        0 0 0 3px var(--star-gold),
+        6px 6px 0 var(--ink);
+    padding: 20px 24px 24px;
+    width: 240px;
+    transition: transform 0.25s ease;
+}
+
+.player:hover {
+    transform: translateY(-4px);
+}
+
+.player h2 {
+    font-family: 'Nougat', 'Lilita One', 'Bangers', cursive;
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin: 0 0 14px;
+    color: var(--sunset-orange);
+    -webkit-text-stroke: 1px var(--ink);
+}
+
+.p1 h2 {
+    color: var(--sunset-orange);
+}
+
+.p2 h2 {
+    color: #4dd0e1;
+}
+
+/* Marco "gema" facetado — elemento distintivo */
+.gem-frame {
+    width: 190px;
+    height: 190px;
+    padding: 6px;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, var(--star-gold), var(--sunset-orange) 55%, var(--brawl-purple));
+    clip-path: polygon(22% 0%, 78% 0%, 100% 22%, 100% 78%, 78% 100%, 22% 100%, 0% 78%, 0% 22%);
+    filter: drop-shadow(4px 6px 0 var(--ink));
+}
+
+.fighter-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: var(--ink);
+    clip-path: polygon(22% 0%, 78% 0%, 100% 22%, 100% 78%, 78% 100%, 22% 100%, 0% 78%, 0% 22%);
+}
+
+select {
+    width: 100%;
+    margin-top: 4px;
+    padding: 10px 12px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    border-radius: 10px;
+    border: 3px solid var(--ink);
+    background-color: var(--cream);
+    box-shadow: 3px 3px 0 var(--ink);
+    cursor: pointer;
+    appearance: none;
+    text-align: center;
+    text-align-last: center;
+}
+
+select:focus {
+    outline: 3px solid var(--star-gold);
+    outline-offset: 2px;
+}
+
+/* ---------- Insignia VS ---------- */
+
+.vs-badge {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 35% 30%, #ffdd7a, var(--sunset-orange) 60%, var(--canyon-rust) 100%);
+    border: 4px solid var(--ink);
+    box-shadow:
+        0 0 0 4px var(--star-gold),
+        4px 5px 0 var(--ink);
+    transform: rotate(-8deg);
+}
+
+.vs-badge span {
+    font-family: 'Nougat', 'Lilita One', 'Bangers', cursive;
+    font-size: 22px;
+    color: var(--ink);
+    letter-spacing: 1px;
+}
+
+/* ---------- Botón de pelea ---------- */
+
+button {
+    font-family: 'Nougat', 'Lilita One', 'Bangers', cursive;
+    letter-spacing: 1.5px;
+    margin-top: 34px;
+    padding: 14px 40px;
+    font-size: 22px;
+    border: 4px solid var(--ink);
+    border-radius: 14px;
+    background: linear-gradient(180deg, var(--star-gold) 0%, var(--sunset-orange) 100%);
+    color: var(--ink);
+    cursor: pointer;
+    box-shadow: 0 6px 0 var(--canyon-rust), 0 10px 18px rgba(0, 0, 0, 0.45);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(180deg, #ffe08a 0%, #ff9a4d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 var(--canyon-rust), 0 14px 20px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 var(--canyon-rust), 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Resultado ---------- */
+
+#result {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 14px 28px;
+    font-family: 'Nougat', 'Lilita One', 'Bangers', cursive;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: var(--star-gold);
+    background: rgba(20, 10, 6, 0.75);
+    border: 4px solid var(--ink);
+    border-radius: 14px;
+    box-shadow: 0 0 0 3px var(--star-gold), 6px 6px 0 var(--ink);
+    animation: punch 1s infinite alternate;
+}
+
+@keyframes punch {
+    0% {
+        transform: scale(1) rotate(-1deg);
+    }
+
+    100% {
+        transform: scale(1.06) rotate(1deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+    .vs-badge {
+        order: 3;
+        margin-top: 8px;
+    }
+
+    #fight-container {
+        gap: 18px;
+    }
+
+    .player {
+        width: 80%;
+        max-width: 260px;
+    }
+}

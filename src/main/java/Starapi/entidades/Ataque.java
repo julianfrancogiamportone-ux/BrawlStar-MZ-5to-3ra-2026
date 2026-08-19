@@ -15,6 +15,9 @@ public class Ataque {
     @ManyToMany(mappedBy = "Ataques")
     private List<Peleador> peleadores;
 
+    public Ataque() {
+    }
+
     public Ataque(Long id, String nombre, int costoEnergia, int danioBase) {
         this.id = id;
         this.nombre = nombre;

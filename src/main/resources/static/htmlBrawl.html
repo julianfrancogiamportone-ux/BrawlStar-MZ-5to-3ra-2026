@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrawlAPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lilita+One&family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/nougat" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/iconoBrawl.png">
+</head>
+
+<body>
+    <div class="arena">
+
+        <header class="title-banner">
+            <span class="title-star star-left">★</span>
+            <h1>¡Batalla de Universos! <span class="fire">🔥</span></h1>
+            <span class="title-star star-right">★</span>
+        </header>
+
+        <div id="fight-container">
+            <div class="player p1">
+                <h2 id="fighter1Label">Jugador 1</h2>
+                <div class="gem-frame">
+                    <img id="fighter1Image" src="brawler-ref1.svg" alt="Personaje 1" class="fighter-img">
+                </div>
+                <select id="fighter1" aria-labelledby="fighter1Label"></select>
+            </div>
+
+            <div class="vs-badge">
+                <span>VS</span>
+            </div>
+
+            <div class="player p2">
+                <h2>Jugador 2</h2>
+                <div class="gem-frame">
+                    <img id="fighter2Image" src="brawler-ref2.svg" alt="Personaje 2" class="fighter-img">
+                </div>
+                <select id="fighter2" aria-label="Seleccionar luchador de Jugador 2"></select>
+            </div>
+        </div>
+
+        <button id="fightButton">¡Pelear!</button>
+
+        <div id="result" class="hidden"></div>
+
+    </div>
+
+    <script src="/js/java.js"></script>
+</body>
+
+</html>
